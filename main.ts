@@ -1,5 +1,31 @@
+input.onPinPressed(TouchPin.P1, function () {
+    if (0 < 0 && 0 < 0) {
+    	
+    }
+    if (0 < 0 && 0 < 0) {
+    	
+    }
+    if (0 < 0 && 0 < 0) {
+    	
+    }
+    if (0 < 0 && 0 < 0) {
+    	
+    }
+    if (0 < 0 && 0 < 0) {
+    	
+    }
+    if (0 < 0 && 0 < 0) {
+    	
+    }
+    if (0 < 0 && 0 < 0) {
+    	
+    }
+    if (0 < 0 && 0 < 0) {
+    	
+    }
+})
 let location = [0, 0]
-basic.forever(function on_forever() {
+basic.forever(function () {
     input.onButtonPressed(Button.A, function on_button_pressed_a() {
         
         while (location[1] < 5) {
@@ -12,13 +38,13 @@ basic.forever(function on_forever() {
         }
         location = [0, 0]
     })
-    input.onButtonPressed(Button.B, function bttnpressedB() {
+input.onButtonPressed(Button.B, function bttnpressedB() {
         for (let i = 0; i < 25; i++) {
             led.toggle(randint(0, 5), randint(0, 5))
             basic.pause(5)
         }
     })
-    input.onPinPressed(TouchPin.P0, function on_pin_pressed_p0() {
+input.onPinPressed(TouchPin.P0, function on_pin_pressed_p0() {
         
         while (location[1] < 5) {
             while (location[0] < 5) {
