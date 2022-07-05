@@ -1,20 +1,20 @@
 def on_pin_pressed_p1():
-    if 0 < 0 and 0 < 0:
-        pass
-    if 0 < 0 and 0 < 0:
-        pass
-    if 0 < 0 and 0 < 0:
-        pass
-    if 0 < 0 and 0 < 0:
-        pass
-    if 0 < 0 and 0 < 0:
-        pass
-    if 0 < 0 and 0 < 0:
-        pass
-    if 0 < 0 and 0 < 0:
-        pass
-    if 0 < 0 and 0 < 0:
-        pass
+    if input.compass_heading() >= 337.5 or input.compass_heading() < 22.5:
+        basic.show_arrow(ArrowNames.NORTH)
+    if input.compass_heading() >= 292.5 and input.compass_heading() < 337.5:
+        basic.show_arrow(ArrowNames.NORTH_WEST)
+    if input.compass_heading() >= 247.5 and input.compass_heading() < 292.5:
+        basic.show_arrow(ArrowNames.WEST)
+    if input.compass_heading() >= 202.5 and input.compass_heading() < 247.5:
+        basic.show_arrow(ArrowNames.SOUTH_WEST)
+    if input.compass_heading() >= 157.5 and input.compass_heading() < 202.5:
+        basic.show_arrow(ArrowNames.SOUTH)
+    if input.compass_heading() >= 112.5 and input.compass_heading() < 157.5:
+        basic.show_arrow(ArrowNames.SOUTH_EAST)
+    if input.compass_heading() >= 67.5 and input.compass_heading() < 112.5:
+        basic.show_arrow(ArrowNames.EAST)
+    if input.compass_heading() >= 22.5 and input.compass_heading() < 67.5:
+        basic.show_arrow(ArrowNames.NORTH_EAST)
 input.on_pin_pressed(TouchPin.P1, on_pin_pressed_p1)
 
 location = [0, 0]
@@ -49,5 +49,15 @@ def on_forever():
             location = [0, location[1] + 1]
         location = [0, 0]
     input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
-    
+
+    def shake():
+
+        basic.show_leds("""
+        . . . . .
+        . . . . .
+        . . # . .
+        . . . . .
+        . . . . .
+        """)
+    if input.is_gesture(Gesture.SHAKE) : shake()
 basic.forever(on_forever)
