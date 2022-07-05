@@ -1,3 +1,22 @@
+def on_pin_pressed_p1():
+    if 0 < 0 and 0 < 0:
+        pass
+    if 0 < 0 and 0 < 0:
+        pass
+    if 0 < 0 and 0 < 0:
+        pass
+    if 0 < 0 and 0 < 0:
+        pass
+    if 0 < 0 and 0 < 0:
+        pass
+    if 0 < 0 and 0 < 0:
+        pass
+    if 0 < 0 and 0 < 0:
+        pass
+    if 0 < 0 and 0 < 0:
+        pass
+input.on_pin_pressed(TouchPin.P1, on_pin_pressed_p1)
+
 location = [0, 0]
 
 def on_forever():
@@ -27,7 +46,6 @@ def on_forever():
             while location[0] < 5:
                 led.unplot(location[0], location[1])
                 location = [location[0] + 1, location[1]]
-                basic.pause(100)
             location = [0, location[1] + 1]
         location = [0, 0]
     input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)

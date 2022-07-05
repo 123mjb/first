@@ -1,27 +1,27 @@
 input.onPinPressed(TouchPin.P1, function () {
-    if (0 < 0 && 0 < 0) {
-    	
+    if (input.compassHeading() >= 337.5 || input.compassHeading() < 22.5) {
+        basic.showArrow(ArrowNames.North)
     }
-    if (0 < 0 && 0 < 0) {
-    	
+    if (input.compassHeading() >= 292.5 && input.compassHeading() < 337.5) {
+        basic.showArrow(ArrowNames.NorthWest)
     }
-    if (0 < 0 && 0 < 0) {
-    	
+    if (input.compassHeading() >= 247.5 && input.compassHeading() < 292.5) {
+        basic.showArrow(ArrowNames.West)
     }
-    if (0 < 0 && 0 < 0) {
-    	
+    if (input.compassHeading() >= 202.5 && input.compassHeading() < 247.5) {
+        basic.showArrow(ArrowNames.SouthWest)
     }
-    if (0 < 0 && 0 < 0) {
-    	
+    if (input.compassHeading() >= 157.5 && input.compassHeading() < 202.5) {
+        basic.showArrow(ArrowNames.South)
     }
-    if (0 < 0 && 0 < 0) {
-    	
+    if (input.compassHeading() >= 112.5 && input.compassHeading() < 157.5) {
+        basic.showArrow(ArrowNames.SouthEast)
     }
-    if (0 < 0 && 0 < 0) {
-    	
+    if (input.compassHeading() >= 67.5 && input.compassHeading() < 112.5) {
+        basic.showArrow(ArrowNames.East)
     }
-    if (0 < 0 && 0 < 0) {
-    	
+    if (input.compassHeading() >= 22.5 && input.compassHeading() < 67.5) {
+        basic.showArrow(ArrowNames.NorthEast)
     }
 })
 let location = [0, 0]
@@ -50,7 +50,6 @@ input.onPinPressed(TouchPin.P0, function on_pin_pressed_p0() {
             while (location[0] < 5) {
                 led.unplot(location[0], location[1])
                 location = [location[0] + 1, location[1]]
-                basic.pause(100)
             }
             location = [0, location[1] + 1]
         }
